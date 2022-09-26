@@ -1,1 +1,1 @@
-# kanbar-board-react-firebase
+# kanban-board-react-firebase
