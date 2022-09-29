@@ -1,11 +1,12 @@
 import React from 'react';
 import "./App.css";
 
-const Task = ({data, id, task}) => {
+const Task = ({task, updateTask}) => {
+
   return (
     <div className="task">
       <h2>{task.title}</h2>
-      <button>Edit</button>
+      <button onClick={updateTask} >Edit</button>
     </div>
   );
 };
