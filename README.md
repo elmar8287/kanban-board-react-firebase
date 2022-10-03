@@ -5,8 +5,8 @@
 ### In this project I used React JS with hooks:
 - `useState()`
 - `useEffect()`
-<!-- 
-![screenshot](./public/assets/dreamcarsautosales.png) -->
+
+![screenshot](./public/kanban.JPG)
 
 ## The [Demo Live](#) version is not available
 
