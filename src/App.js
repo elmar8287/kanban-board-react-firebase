@@ -6,17 +6,15 @@ import {data} from "./data";
 import AddTask from './AddTask';
 
 function App() {
-  const [status, setStatus] = useState("")
   const [newData, setNewData] = useState(data)
-  const statusHandle = (e) => {
-    setStatus(e.target.value)
-  }
 
-  const updateTask = () => {
+  const updateTask = (id, e) => {
+    
+    // console.log("id is", id)
     setNewData(current =>
       current.map(obj => {
-        if (obj.id === 4) {
-          return {...obj, status: 'Done'};
+        if (obj.id === id) {
+          return {...obj, status: e.target.value};
         }
         return obj;
       }),

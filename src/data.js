@@ -22,7 +22,7 @@ export const data = [
   {
     id: 5,
     title: "Task 5",
-    status: ""
+    status: "Done"
   },
   {
     id: 6,

@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({data}) => {
+const Tasks = ({data, updateTask}) => {
   const filterHandle = (filter) => {
     return data.filter(e => e.status === filter);
   };
@@ -19,12 +19,12 @@ const Tasks = ({data}) => {
           {
             filterHandle("")
               .map(task => (
-              <Task task={task} />
+              <Task task={task} updateTask={updateTask} />
             ))
           }
         </div>
         <div className="boards">
-          <div className="boards-title">
+          <div className={filterHandle("In process").length>=4 ? "boards-title-warning" :"boards-title"}>
             <h2>In process</h2>
             <span>
               {filterHandle("In process").length}
@@ -33,7 +33,7 @@ const Tasks = ({data}) => {
           {
             filterHandle("In process")
               .map(task => (
-              <Task task={task} />
+              <Task task={task} updateTask={updateTask} />
             ))
           }
         </div>
@@ -47,7 +47,7 @@ const Tasks = ({data}) => {
           {
             filterHandle("On review")
               .map(task => (
-              <Task task={task} />
+              <Task task={task} updateTask={updateTask}/>
             ))
           }
         </div>
@@ -61,7 +61,7 @@ const Tasks = ({data}) => {
           {
             filterHandle("Done")
             .map(task => (
-              <Task task={task} />
+              <Task task={task} updateTask={updateTask}/>
             ))
           }
         </div>
