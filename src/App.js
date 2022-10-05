@@ -9,8 +9,6 @@ function App() {
   const [newData, setNewData] = useState(data)
 
   const updateTask = (id, e) => {
-    
-    // console.log("id is", id)
     setNewData(current =>
       current.map(obj => {
         if (obj.id === id) {
