@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({data, updateTask}) => {
+const Tasks = ({data, updateTask, modalHandle, modal}) => {
   const filterHandle = (filter) => {
     return data.filter(e => e.status === filter);
   };
@@ -19,7 +19,7 @@ const Tasks = ({data, updateTask}) => {
           {
             filterHandle("")
               .map(task => (
-              <Task task={task} updateTask={updateTask} />
+              <Task task={task} updateTask={updateTask} modalHandle={modalHandle} modal={modal}/>
             ))
           }
         </div>
@@ -33,7 +33,7 @@ const Tasks = ({data, updateTask}) => {
           {
             filterHandle("In process")
               .map(task => (
-              <Task task={task} updateTask={updateTask} />
+              <Task task={task} updateTask={updateTask} modalHandle={modalHandle} modal={modal} />
             ))
           }
         </div>
@@ -47,7 +47,7 @@ const Tasks = ({data, updateTask}) => {
           {
             filterHandle("On review")
               .map(task => (
-              <Task task={task} updateTask={updateTask}/>
+              <Task task={task} updateTask={updateTask} modalHandle={modalHandle} modal={modal}/>
             ))
           }
         </div>
@@ -61,7 +61,7 @@ const Tasks = ({data, updateTask}) => {
           {
             filterHandle("Done")
             .map(task => (
-              <Task task={task} updateTask={updateTask}/>
+              <Task task={task} updateTask={updateTask} modalHandle={modalHandle} modal={modal}/>
             ))
           }
         </div>

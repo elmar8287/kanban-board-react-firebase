@@ -30,13 +30,30 @@ function App() {
     );
   };
 
+  const [modal, setModal] = useState(false)
+  const modalHandle = (task) => {
+    setModal(!modal)
+    setInfo([
+      id=task.id
+      
+    ])
+    console.log("pressed")
+  }
+
 
   return (
 
     <div className="App">
       <h1>This is a Kanban board</h1>
       <AddTask  addTask={addTask} newData={newData} />
-      <Tasks updateTask={updateTask} data={newData} />
+      <Tasks updateTask={updateTask} data={newData} modalHandle={modalHandle} modal={modal} />
+      {
+        modal &&
+        <div>
+          <p>Is working</p>
+          <button onClick={modalHandle}>Close</button>
+        </div>
+      }
     </div>
   );
 }
