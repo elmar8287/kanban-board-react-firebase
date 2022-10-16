@@ -26,6 +26,13 @@ body {
   color: white;
 }
 
+.boards-title-warning {
+  background: rgb(225, 18, 18);
+  display: flex;
+  justify-content: space-between;
+  color: rgb(249, 249, 0);
+}
+
 .boards h2 {
   margin: 0;
   padding: 5px;
@@ -60,6 +67,14 @@ li {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+}
+
+.task img {
+  width: 60px;
+  height: 75px;
+  border-radius: 50%;
+  margin-left: 100px;
+  border: inset black;
 }
 
 .task:hover {
