@@ -40,7 +40,6 @@ function App() {
     console.log("pressed")
   }
 
-
   return (
 
     <div className="App">
@@ -49,7 +48,7 @@ function App() {
       <Tasks updateTask={updateTask} data={newData} modalHandle={modalHandle} modal={modal} />
       {
         modal &&
-        <div>
+        <div className='modal-task'>
           <p>Is working</p>
           <button onClick={modalHandle}>Close</button>
         </div>
