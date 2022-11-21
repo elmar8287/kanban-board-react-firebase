@@ -12,11 +12,11 @@ const Task = ({task, updateTask, modal, modalHandle}) => {
   }
 
   return (
-    <div className="task" onClick={e => modalHandle(task)}>
-      <h2>{task.title}</h2>
+    <div className="task">
+      <h3 onClick={e => modalHandle(task)}>{task.title}</h3>
       <img src={task.avatar} alt="avatar" />
       <select value={e => selectHandle(e)} onChange={e => {handleSubmit(e)}}>
-        <option></option>
+        <option hidden>Update the status</option>
         <option>In process</option>
         <option>On review</option>
         <option>Done</option>
