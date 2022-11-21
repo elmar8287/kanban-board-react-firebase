@@ -69,18 +69,29 @@ li {
   justify-content: space-between;
 }
 
+.task select {
+  height: 30px;
+  border: solid gainsboro;
+  border-radius: 4px;
+  color: rgb(206, 206, 206);
+}
+
+.task h3 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .task img {
-  width: 60px;
-  height: 75px;
+  width: 30px;
+  height: 45px;
   border-radius: 50%;
   margin-left: 100px;
-  border: inset black;
+  border: solid rgb(181, 181, 181) 1px;
 }
 
 .task:hover {
   background-color: rgb(110, 110, 245);
   color: black;
-  cursor: pointer;
 }
 
 .task button {
@@ -123,12 +134,22 @@ li {
 }
 
 .modal-task {
-  background-color: white;
+  height: 80%;
+  width: 70%;
+  position: fixed;
+  z-index: 15;
+  top: 7%;
+  left: 15%;
+  background-color: #fcfcfc;
+  overflow-x: hidden;
+  opacity: 100%;
+  border-radius: 15px;
   border: solid gray;
-  width: 300px;
-  height: 300px;
-  top: -200px;
-  left: 20px;
-  padding: 15px;
-  z-index: 1;
+  padding: 10px;
+  display: flex;
+}
+
+span {
+  color: blue;
+  font-weight: 700;
 }
