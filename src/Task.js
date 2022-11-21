@@ -12,7 +12,7 @@ const Task = ({task, updateTask, modal, modalHandle}) => {
   }
 
   return (
-    <div className="task" onClick={modalHandle}>
+    <div className="task" onClick={e => modalHandle(task)}>
       <h2>{task.title}</h2>
       <img src={task.avatar} alt="avatar" />
       <select value={e => selectHandle(e)} onChange={e => {handleSubmit(e)}}>
