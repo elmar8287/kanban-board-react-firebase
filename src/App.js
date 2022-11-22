@@ -51,10 +51,11 @@ function App() {
           <p>Created by <span>{info.user}</span> on <span>{info.created}</span></p>
           <p>{info.description}</p>
           <span>Taged person: {info.resposible}</span>
+          <img src={info.avatar} />
           </div>
         </div>
       }
-      <h1>This is a Kanban board</h1>
+      <h1>Kanban board</h1>
       <AddTask  addTask={addTask} newData={newData} />
       <Tasks updateTask={updateTask} data={newData} modalHandle={modalHandle} modal={modal} />
     </div>

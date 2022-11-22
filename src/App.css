@@ -152,3 +152,10 @@ span {
   color: blue;
   font-weight: 700;
 }
+
+.modal-task img {
+  width: 150px;
+  height: 200px;
+  margin: 7px;
+  border-radius: 30%;
+}
