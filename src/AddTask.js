@@ -19,7 +19,7 @@ const AddTask = ({addTask, newData}) => {
   return (
     <div className="add-task">
       <form onSubmit={handleSubmit} className="add-task-form">
-        <input type="text" value={input} onChange={inputHandle} placeholder="Insert the task title" />
+        <input type="text" value={input} onChange={inputHandle} maxLength="16" placeholder="Insert the task title" />
         <button type={input!=="" ? "submit" : "button"}>Create</button>
       </form>
     </div>
